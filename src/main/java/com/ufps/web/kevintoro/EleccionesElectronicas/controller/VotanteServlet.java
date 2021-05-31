@@ -29,7 +29,6 @@ public class VotanteServlet extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     String action = request.getServletPath();
-    System.out.println(action);
     switch (action) {
       case "/add":
         mostrarFormularioAgregar(request, response);

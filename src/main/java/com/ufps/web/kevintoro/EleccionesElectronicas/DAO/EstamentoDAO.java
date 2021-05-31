@@ -25,7 +25,7 @@ public class EstamentoDAO {
       ResultSet resultSet = connectionDB.executeQuery();
       while (resultSet.next()) {
         int id = resultSet.getInt("id");
-        int eleccion = resultSet.getInt("estamento");
+        int eleccion = resultSet.getInt("eleccion");
         String descripcion = resultSet.getString("descripcion");
         estamentos.add(new Estamento(id, eleccion, descripcion));
       }
