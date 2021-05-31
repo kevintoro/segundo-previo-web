@@ -7,7 +7,7 @@ public class ConnectionDB {
   private Connection connection = null;
   private PreparedStatement preparedStatement = null;
   private static ConnectionDB connectionDB;
-  private static final String url = "jdbc:postgresql://queenie.db.elephantsql.com:5432/mnjgxshj";
+  private static final String url = "jdbc:postgresql://queenie.db.elephantsql.com:5432/";
   private static final String dbName = "mnjgxshj";
   private static final String driver = "org.postgresql.Driver";
   private static final String username = "mnjgxshj";
