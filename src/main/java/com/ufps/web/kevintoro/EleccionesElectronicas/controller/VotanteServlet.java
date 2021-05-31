@@ -35,7 +35,6 @@ public class VotanteServlet extends HttpServlet {
   }
   
   private void listarVotantes(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-  
   }
   
   private void eliminarVotante(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
