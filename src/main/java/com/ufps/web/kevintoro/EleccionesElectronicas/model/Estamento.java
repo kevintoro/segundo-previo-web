@@ -15,4 +15,9 @@ public class Estamento implements Serializable {
     this.eleccion = eleccion;
     this.descripcion = descripcion;
   }
+  
+  public Estamento(int eleccion, String descripcion) {
+    this.eleccion = eleccion;
+    this.descripcion = descripcion;
+  }
 }

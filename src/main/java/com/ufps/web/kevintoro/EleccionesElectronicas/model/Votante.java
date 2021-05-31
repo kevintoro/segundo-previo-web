@@ -21,4 +21,12 @@ public class Votante implements Serializable {
     this.tipoDocumento = tipoDocumento;
     this.eleccion = eleccion;
   }
+  
+  public Votante(String nombre, String email, String documento, int tipoDocumento, int eleccion) {
+    this.nombre = nombre;
+    this.email = email;
+    this.documento = documento;
+    this.tipoDocumento = tipoDocumento;
+    this.eleccion = eleccion;
+  }
 }

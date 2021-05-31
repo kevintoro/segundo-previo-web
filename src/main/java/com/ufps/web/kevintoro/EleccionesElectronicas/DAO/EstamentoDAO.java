@@ -13,6 +13,7 @@ public class EstamentoDAO {
   private final ConnectionDB connectionDB;
   
   public final static String GET_ALL_ESTAMENTOS = "select * from estamento";
+  public final static String GET_ESTAMENTOS_BY_ID = "select * from estamento where id = ?";
   
   public EstamentoDAO() {
     connectionDB = ConnectionDB.getConnection();
@@ -33,5 +34,23 @@ public class EstamentoDAO {
       System.out.println("Error al listar estamentos: " + e);
     }
     return estamentos;
+  }
+  
+  public Estamento estamentoPorID(int id) {
+    Estamento estamento = null;
+    try {
+      PreparedStatement statement = connectionDB.setPreparedStatement(GET_ESTAMENTOS_BY_ID);
+      statement.setInt(1, id);
+      ResultSet resultSet = connectionDB.executeQuery();
+      while (resultSet.next()) {
+        int idFind = resultSet.getInt("id");
+        int eleccion = resultSet.getInt("eleccion");
+        String descripcion = resultSet.getString("descripcion");
+        estamento = new Estamento(idFind, eleccion, descripcion);
+      }
+    } catch (SQLException e) {
+      System.out.println("Error al buscar estamento por ID: " + e);
+    }
+    return estamento;
   }
 }

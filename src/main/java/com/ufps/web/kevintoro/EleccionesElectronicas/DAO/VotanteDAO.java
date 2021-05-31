@@ -29,6 +29,7 @@ public class VotanteDAO {
       statement.setString(3, votante.getDocumento());
       statement.setInt(4, votante.getTipoDocumento());
       statement.setInt(5, votante.getEleccion());
+      connectionDB.executeStatement();
     } catch (SQLException e) {
       System.out.println("Error insertando: " + e);
     }
@@ -64,6 +65,7 @@ public class VotanteDAO {
       statement.setInt(4, votante.getTipoDocumento());
       statement.setInt(5, votante.getEleccion());
       statement.setInt(6, votante.getId());
+      connectionDB.executeStatement();
     } catch (SQLException e) {
       System.out.println("Error al actualizar votante: " + e);
     }

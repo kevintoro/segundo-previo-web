@@ -11,7 +11,7 @@
 <hr>
 <div class="container text-left">
   
-  <a href="<%=request.getContextPath()%>/add" class="btn btn-success">
+  <a href="<%=request.getContextPath()%>/add" class="btn btn-outline-danger">
     Agregar Votante
   </a>
 </div>
@@ -31,19 +31,19 @@
   <c:forEach var="votante" items="${votantes}">
     <tr>
       <td>
-        <c:out value="${user.user_id}"/>
+        <c:out value="${votante.id}"/>
       </td>
       <td>
-        <c:out value="${user.user_name}"/>
+        <c:out value="${votante.nombre}"/>
       </td>
       <td>
-        <c:out value="${user.user_email}"/>
+        <c:out value="${votante.email}"/>
       </td>
       <td>
-        <c:out value="${user.user_country}"/>
+        <c:out value="${votante.documento}"/>
       </td>
-      <td><a href="edit?user_id=<c:out value='${votante.id}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
-          href="delete?user_id=<c:out value='${votante.id}' />">Delete</a></td>
+      <td><a href="edit?votante_id=<c:out value='${votante.id}' />">Edit</a> &nbsp;&nbsp;&nbsp;&nbsp; <a
+          href="delete?votante_id=<c:out value='${votante.id}' />">Delete</a></td>
     </tr>
   </c:forEach>
   <!-- } -->

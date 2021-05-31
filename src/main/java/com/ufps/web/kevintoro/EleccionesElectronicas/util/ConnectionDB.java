@@ -7,11 +7,11 @@ public class ConnectionDB {
   private Connection connection = null;
   private PreparedStatement preparedStatement = null;
   private static ConnectionDB connectionDB;
-  private static final String url = "jdbc:postgresql://localhost:5432/";
-  private static final String dbName = "segundo_previo";
+  private static final String url = "jdbc:postgresql://queenie.db.elephantsql.com:5432/mnjgxshj";
+  private static final String dbName = "mnjgxshj";
   private static final String driver = "org.postgresql.Driver";
-  private static final String username = "kevintoro";
-  private static final String password = "katg0719";
+  private static final String username = "mnjgxshj";
+  private static final String password = "Uzjqo00sxV0W9OzPEB1q3wpoVvGMbbUV";
   
   
   public ConnectionDB() {
