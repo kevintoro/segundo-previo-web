@@ -47,6 +47,9 @@
         </div>
         <div class="form-group"></div>
       </form>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-danger btn-lg">Registrar Votante</button>
+      </div>
     </div>
   </div>
 </div>
