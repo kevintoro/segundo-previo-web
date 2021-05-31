@@ -13,8 +13,7 @@
       <form action="insert" method="post">
         <div class="form-group">
           <label for="estamento">Estamento: </label>
-          <select name="estamento" id="estamento" class="form-control">
-            <option value="default">Seleccione una opcion</option>
+          <select name="estamento" id="estamento" class="form-control" required>
             <c:forEach var="estamento" items="${estamentos}">
               <option value="${estamento.id}">
                 <c:out value="${estamento.descripcion}" />
@@ -24,8 +23,7 @@
         </div>
         <div class="form-group">
           <label for="tipo-documento">Tipo de documento:</label>
-          <select name="tipo-documento" id="tipo-documento" class="form-control">
-            <option value="default">Seleccione una opcion</option>
+          <select name="tipo-documento" id="tipo-documento" class="form-control" required>
             <c:forEach var="tipoDocumento" items="${tipoDocumentos}">
               <option value="${tipoDocumento.id}">
                 <c:out value="${tipoDocumento.descripcion}" />
@@ -46,10 +44,16 @@
           <input type="email" class="form-control" required id="email" name="email">
         </div>
         <div class="form-group"></div>
+        <div class="form-group">
+          <label for="proceso">Proceso:</label>
+          <select name="proceso" id="proceso" class="form-control" required>
+            <option value="1">Rectoria 2021 - 2025</option>
+          </select>
+        </div>
+        <div class="d-grid mt-3">
+          <button type="submit" class="btn btn-danger btn-lg">Registrar Votante</button>
+        </div>
       </form>
-      <div class="d-grid">
-        <button type="submit" class="btn btn-danger btn-lg">Registrar Votante</button>
-      </div>
     </div>
   </div>
 </div>
